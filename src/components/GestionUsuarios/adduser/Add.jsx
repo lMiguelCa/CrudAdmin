@@ -29,7 +29,8 @@ const Add = () => {
         setIsloading(true)
         await axios.post("http://localhost:8000/api/create", user)
         .then((response)=>{
-            toast.success(response.data.msg, {position:"top-right"})
+            // toast.success(response.data.msg, {position:"top-right"})
+            toast.success("Usuario creado", {position:"top-right"})
             navigate("/")
             setIsloading(false)
         })
